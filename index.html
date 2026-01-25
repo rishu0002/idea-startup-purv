@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IDEAS and STARTUP PURV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar">
+  <div class="nav-left">
+    <img src="assets/logo.png" alt="Logo">
+    <span>IDEAS & STARTUP PURV</span>
+  </div>
+  <div class="nav-right">
+    <a href="#about">About</a>
+    <a href="#register" class="nav-btn">Register</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content hero-animate">
+
+    <div class="logo-box">
+      <img src="assets/logo.png" alt="IDEAS and STARTUP PURV Logo">
+    </div>
+
+    <h1>IDEAS and STARTUP PURV</h1>
+    <p class="tagline">Innovation • Digital Empowerment • Startup Growth</p>
+
+    <div class="buttons">
+      <a href="#register" class="btn primary">Register Your Details</a>
+      <a href="#" class="btn green">Join WhatsApp</a>
+      <a href="#" class="btn green">Join Telegram</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section light reveal" id="about">
+  <h2>About IDEAS and STARTUP PURV</h2>
+  <p>
+    IDEAS and STARTUP PURV is a public-focused initiative dedicated to
+    fostering innovation, entrepreneurship, and digital empowerment.
+  </p>
+  <p>
+    The initiative connects students, startups, professionals, and
+    community members with opportunities, guidance, and a strong
+    innovation-driven ecosystem.
+  </p>
+</section>
+
+<!-- ================= LEADER ================= -->
+<section class="about-leader reveal">
+  <div class="leader-container">
+
+    <div class="leader-image">
+      <img src="assets/dr-omkar-rai.jpeg" alt="Dr Omkar Rai">
+    </div>
+
+    <div class="leader-content">
+      <h2>Dr. Omkar Rai</h2>
+      <h4>Technocrat | Policy Maker | Innovation Leader</h4>
+      <p>
+        Former Executive Chairman, Startup Odisha and Director General,
+        Software Technology Parks of India (STPI).
+      </p>
+      <p>
+        Visionary leader behind Tier-2 & Tier-3 startup ecosystem growth
+        and establishment of 20+ Centres of Excellence.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats reveal">
+  <div class="stat">
+    <h3>20+</h3>
+    <p>Centres of Excellence</p>
+  </div>
+  <div class="stat">
+    <h3>1000+</h3>
+    <p>Startups Supported</p>
+  </div>
+  <div class="stat">
+    <h3>Pan-India</h3>
+    <p>Innovation Reach</p>
+  </div>
+</section>
+
+<!-- ================= WHAT WE DO ================= -->
+<section class="section light reveal">
+  <h2>What We Do</h2>
+  <ul>
+    <li>Promote innovation and startup awareness</li>
+    <li>Support students and young entrepreneurs</li>
+    <li>Enable digital empowerment initiatives</li>
+    <li>Connect communities with opportunities</li>
+    <li>Encourage public participation and engagement</li>
+  </ul>
+</section>
+
+<!-- ================= REGISTER FORM ================= -->
+<section class="section reveal" id="register">
+  <h2>Register & Connect With Us</h2>
+
+  <form id="contactForm">
+
+    <label>Full Name / नाम</label>
+    <input name="name" required>
+
+    <label>Mobile Number / मोबाइल</label>
+    <input name="contact" required>
+
+    <label>Gender / लिंग</label>
+    <select name="gender">
+      <option value="">Select</option>
+      <option>Male / पुरुष</option>
+      <option>Female / महिला</option>
+      <option>Other</option>
+    </select>
+
+    <label>Age Group / आयु वर्ग</label>
+    <select name="age_group" required>
+      <option value="">Select</option>
+      <option>18–25</option>
+      <option>26–35</option>
+      <option>36–50</option>
+      <option>50+</option>
+    </select>
+
+    <label>Profession / पेशा</label>
+    <select name="profession" id="profession" required>
+      <option value="">Select</option>
+      <option>Student / विद्यार्थी</option>
+      <option>College Student</option>
+      <option>PhD Scholar</option>
+      <option>Professional</option>
+      <option>Business</option>
+      <option>Social Worker</option>
+      <option>Other</option>
+    </select>
+
+    <!-- STUDENT FIELDS -->
+    <div id="studentFields" class="student-fields">
+      <label>Education Level</label>
+      <select name="education_level">
+        <option value="">Select</option>
+        <option>School</option>
+        <option>UG</option>
+        <option>PG</option>
+        <option>PhD</option>
+      </select>
+
+      <label>Class / Year</label>
+      <input name="class_year">
+
+      <label>Institute Name</label>
+      <input name="institute">
+
+      <label>Course / Subject</label>
+      <input name="course">
+    </div>
+
+    <!-- ADDRESS -->
+    <label>Village</label>
+    <input name="village" required>
+
+    <label>Post</label>
+    <input name="post">
+
+    <label>Block / Tehsil</label>
+    <input name="block">
+
+    <label>District</label>
+    <input name="district" required>
+
+    <label>State</label>
+    <select name="state">
+      <option>Uttar Pradesh</option>
+    </select>
+
+    <label>Pincode</label>
+    <input name="pincode">
+
+    <!-- INTEREST -->
+    <label>Area of Interest</label>
+    <select name="interest">
+      <option value="">Select</option>
+    <option>Startup & Entrepreneurship / स्टार्टअप</option>
+    <option>Skill Development / कौशल विकास</option>
+    <option>Education / शिक्षा</option>
+    <option>Digital Empowerment / डिजिटल सशक्तिकरण</option>
+    <option>Social Work / सामाजिक कार्य</option>
+    <option>Innovation & Policy / नवाचार व नीति</option>
+    </select>
+
+ <label>How did you hear about us?  
+    <br>आपको हमारे बारे में कैसे पता चला?</label>
+  <select name="source">
+    <option value="">Select / चुनें</option>
+    <option>WhatsApp</option>
+    <option>Telegram</option>
+    <option>Instagram</option>
+    <option>Facebook</option>
+    <option>Friend / Reference / मित्र</option>
+    <option>Other / अन्य</option>
+  </select>
+
+    <!-- HONEYPOT -->
+    <input type="text" name="website" class="honeypot">
+
+    <button id="submitBtn" type="submit">Submit</button>
+
+  </form>
+
+  <!-- SUCCESS MESSAGE -->
+  <div id="successMessage" class="success-card">
+    <h3>✅ Thank you for registering!</h3>
+    <p>आपकी जानकारी सफलतापूर्वक जमा हो गई है।</p>
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
