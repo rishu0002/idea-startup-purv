@@ -1,17 +1,18 @@
 /* ================= SCROLL REVEAL ================= */
-window.addEventListener("scroll", () => {
-  const reveals = document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
 
   reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
     const elementTop = el.getBoundingClientRect().top;
-    const visiblePoint = 100;
-
-    if (elementTop < windowHeight - visiblePoint) {
-      el.classList.add("active");
+    if (elementTop < windowHeight - 80) {
+      el.classList.add('active');
     }
   });
-});
+}
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
 
 /* ================= STUDENT FIELDS TOGGLE ================= */
 const professionSelect = document.getElementById("profession");
@@ -87,3 +88,76 @@ form.addEventListener("submit", function (e) {
       }
     });
 });
+
+/* ================= MOBILE FLOATING BAR ================= */
+function toggleMobileBar() {
+  const bar = document.querySelector('.mobile-social-bar');
+  if (!bar) return;
+
+  if (window.innerWidth <= 768) {
+    bar.style.display = 'flex';
+  } else {
+    bar.style.display = 'none';
+  }
+}
+
+window.addEventListener('load', toggleMobileBar);
+window.addEventListener('resize', toggleMobileBar);
+
+/* ================= STATS COUNT ANIMATION ================= */
+const counters = document.querySelectorAll('.stat h3');
+let statsPlayed = false;
+
+function animateStats() {
+  if (statsPlayed) return;
+
+  counters.forEach(counter => {
+    const targetText = counter.innerText;
+    const target = parseInt(targetText.replace('+','')) || 0;
+    let count = 0;
+
+    const speed = Math.max(20, target / 60);
+
+    const updateCount = () => {
+      if (count < target) {
+        count += speed;
+        counter.innerText = Math.floor(count) + '+';
+        requestAnimationFrame(updateCount);
+      } else {
+        counter.innerText = targetText;
+      }
+    };
+
+    updateCount();
+  });
+
+  statsPlayed = true;
+}
+
+/* ================= OBSERVER FOR STATS ================= */
+const statsSection = document.querySelector('.stats');
+
+if (statsSection) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateStats();
+      }
+    });
+  }, { threshold: 0.4 });
+
+  observer.observe(statsSection);
+}
+
+// Hide loader on load
+window.addEventListener("load", () => {
+  const loader = document.getElementById("page-loader");
+  if (loader) loader.style.display = "none";
+});
+// Auto update footer year
+document.getElementById("year").textContent = new Date().getFullYear();
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
+});
+
